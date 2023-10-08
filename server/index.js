@@ -13,6 +13,8 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
+
+// --------------------------------- //
 dotenv.config(
     { path: './config.env' }
 );
@@ -39,7 +41,6 @@ const configuration = {
 const openai = new OpenAi(configuration);
 
 const fetch_response = async (prompt) => {
-
     const chatCompletion = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [{ "role": "user", "content": prompt }],
@@ -100,6 +101,7 @@ app.get('/', async (req, res) => {
     }
 })
 
+// ---------------------- //
 const PORT = 8000;
 app.listen(PORT, () => {
     console.log('Listening.........')

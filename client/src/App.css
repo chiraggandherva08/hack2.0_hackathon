@@ -126,7 +126,7 @@ body {
     border-radius: 5px;
 
     transition-duration: 0.2s;
-    
+
     border-style: solid;
     border-color: transparent;
     border-width: 0.5px;
@@ -181,7 +181,7 @@ body {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.sus-tips{
+.sus-tips {
     margin-top: 5px;
     margin-bottom: 5px;
     color: #ffe760;
