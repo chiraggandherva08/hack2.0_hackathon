@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+
+body {
+    background: rgb(245, 248, 250);
+}
+
+#back-bg {
+    width: 100%;
+    height: 160px;
+
+    position: fixed;
+    top: 0px;
+
+    border-bottom-width: 0.5px;
+    border-color: rgba(0, 0, 0, 0.2);
+
+    background: rgba(245, 248, 250, 0.96);
+    backdrop-filter: blur(3px);
+}
+
+#search-bar {
+    max-width: 700px;
+    height: 30px;
+    width: calc(100% - 40px);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: rgb(255, 255, 255);
+
+    padding: 10px 0px;
+    border-radius: 10px;
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#start-location,
+#end-location {
+    width: 28%;
+    height: 100%;
+
+    border-color: rgba(0, 0, 0, 0.1);
+    outline: 0;
+    padding: 0px 10px;
+
+    border-radius: 5px;
+}
+
+#days {
+    border-radius: 5px;
+
+    width: 50px;
+    height: 100%;
+    width: 28%;
+
+    border-color: rgba(0, 0, 0, 0.1);
+    outline: 0;
+    padding: 0px 10px;
+}
+
+#calc {
+    position: fixed;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 130px;
+    height: 35px;
+
+    font-size: 1.05em;
+    background: white;
+    color: black;
+
+    border-radius: 20px;
+    cursor: pointer;
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-color: black;
+    outline: 0;
+
+    transition-duration: 0.3s;
+}
+
+#calc:hover {
+    background: black;
+    color: white;
+}
+
+#journey {
+    width: calc(100% - 40px);
+    max-width: 800px;
+
+    height: auto;
+    padding: 5px;
+
+    border-radius: 5px;
+
+    color: black;
+
+    margin: 160px auto;
+
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: 0.5px;
+}
+
+.daywise-journey {
+    margin: 10px;
+    padding: 15px;
+
+    border-radius: 5px;
+
+    transition-duration: 0.2s;
+    
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.5px;
+
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.daywise-journey:hover {
+    cursor: default;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgba(0, 0, 0, 0.1);
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#loading {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: white;
+
+    animation: load 0.5s infinite linear;
+    transform-origin: center;
+    padding: 0px 1px 2px 1px;
+
+    border-radius: 50%;
+
+    display: none;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.green {
+    background: rgb(0, 138, 55);
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sus-tips{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #ffe760;
+}
